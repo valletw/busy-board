@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "Busy Board")
-		(date "2026-08-08")
-		(rev "1.0.0")
+		(date "2026-09-25")
+		(rev "1.1.0")
 	)
 	(lib_symbols
 		(symbol "74HC08:74HC08D"
@@ -985,7 +985,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Transistor_BJT:MMBT3904"
+		(symbol "Transistor_FET:AO3400A"
 			(pin_names
 				(offset 0)
 				(hide yes)
@@ -1002,7 +1002,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "MMBT3904"
+			(property "Value" "AO3400A"
 				(at 5.08 0 0)
 				(effects
 					(font
@@ -1022,8 +1022,8 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/pzt3904-d.pdf"
-				(at 0 0 0)
+			(property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3400A.pdf"
+				(at 5.08 -3.81 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1032,7 +1032,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "0.2A Ic, 40V Vce, Small Signal NPN Transistor, SOT-23"
+			(property "Description" "30V Vds, 5.7A Id, N-Channel MOSFET, SOT-23"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1041,25 +1041,7 @@
 					(hide yes)
 				)
 			)
-			(property "Sim.Device" "NPN"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Pins" "1=B 2=E 3=C"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "NPN Transistor"
+			(property "ki_keywords" "N-Channel MOSFET"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1077,34 +1059,11 @@
 					(hide yes)
 				)
 			)
-			(symbol "MMBT3904_0_1"
+			(symbol "AO3400A_0_1"
 				(polyline
 					(pts
-						(xy -2.54 0) (xy 0.635 0)
+						(xy 0.254 1.905) (xy 0.254 -1.905)
 					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 1.905) (xy 0.635 -1.905)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 1.27 0)
-					(radius 2.8194)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -1113,11 +1072,9 @@
 						(type none)
 					)
 				)
-			)
-			(symbol "MMBT3904_1_1"
 				(polyline
 					(pts
-						(xy 0.635 0.635) (xy 2.54 2.54)
+						(xy 0.254 0) (xy -2.54 0)
 					)
 					(stroke
 						(width 0)
@@ -1129,7 +1086,43 @@
 				)
 				(polyline
 					(pts
-						(xy 0.635 -0.635) (xy 2.54 -2.54)
+						(xy 0.762 2.286) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.27) (xy 0.762 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
 					)
 					(stroke
 						(width 0)
@@ -1141,7 +1134,7 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778)
+						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
 					)
 					(stroke
 						(width 0)
@@ -1151,10 +1144,93 @@
 						(type outline)
 					)
 				)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.921 0.381) (xy 3.683 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "AO3400A_1_1"
 				(pin input line
 					(at -5.08 0 0)
 					(length 2.54)
-					(name "B"
+					(name "G"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1172,7 +1248,7 @@
 				(pin passive line
 					(at 2.54 5.08 270)
 					(length 2.54)
-					(name "C"
+					(name "D"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1190,7 +1266,7 @@
 				(pin passive line
 					(at 2.54 -5.08 90)
 					(length 2.54)
-					(name "E"
+					(name "S"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3890,6 +3966,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 154.94 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "011ecba4-3554-4447-9bed-ef355f2df5b4")
 		)
@@ -3900,6 +3985,118 @@
 			(project "busy-board"
 				(path "/0502a6a9-5fe6-43a5-b6f7-3b5176fd87b6/08933428-202d-4e44-b1e5-bc563aabcc56/4c633b67-2d19-4a2d-9e10-a3e1f9571997"
 					(reference "R620")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:AO3400A")
+		(at 35.56 132.08 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0ee1e9a1-f804-45e4-9fc6-42e4b815872b")
+		(property "Reference" "Q601"
+			(at 41.91 130.8099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "AO3400A"
+			(at 41.91 133.3499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 40.64 133.985 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3400A.pdf"
+			(at 40.64 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "30V Vds, 5.7A Id, N-Channel MOSFET, SOT-23"
+			(at 35.56 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C20917"
+			(at 35.56 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Alpha & Omega Semicon"
+			(at 35.56 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFR Part #" "AO3400A"
+			(at 35.56 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 35.56 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "4a1879cb-8345-4821-9fff-a5016aa5d7f6")
+		)
+		(pin "1"
+			(uuid "d54d559e-644e-43d4-a8b4-676704d201ae")
+		)
+		(pin "2"
+			(uuid "ba582665-4c9c-4256-8f6e-0189d5d9d247")
+		)
+		(instances
+			(project "busy-board"
+				(path "/0502a6a9-5fe6-43a5-b6f7-3b5176fd87b6/08933428-202d-4e44-b1e5-bc563aabcc56/4c633b67-2d19-4a2d-9e10-a3e1f9571997"
+					(reference "Q601")
 					(unit 1)
 				)
 			)
@@ -4038,6 +4235,118 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_FET:AO3400A")
+		(at 137.16 132.08 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "16ae17c2-ac4b-4b9d-95e9-bfc51fabfe38")
+		(property "Reference" "Q605"
+			(at 143.51 130.8099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "AO3400A"
+			(at 143.51 133.3499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 142.24 133.985 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3400A.pdf"
+			(at 142.24 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "30V Vds, 5.7A Id, N-Channel MOSFET, SOT-23"
+			(at 137.16 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C20917"
+			(at 137.16 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Alpha & Omega Semicon"
+			(at 137.16 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFR Part #" "AO3400A"
+			(at 137.16 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 137.16 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "73c38406-dbb2-4852-9ff1-7ab4e832662d")
+		)
+		(pin "1"
+			(uuid "5e1d3a38-a367-40d7-8f30-b2901eb75770")
+		)
+		(pin "2"
+			(uuid "cae86a3e-8888-49a2-acca-2a6bc596723a")
+		)
+		(instances
+			(project "busy-board"
+				(path "/0502a6a9-5fe6-43a5-b6f7-3b5176fd87b6/08933428-202d-4e44-b1e5-bc563aabcc56/4c633b67-2d19-4a2d-9e10-a3e1f9571997"
+					(reference "Q605")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 63.5 119.38 90)
 		(unit 1)
@@ -4154,6 +4463,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 63.5 119.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "c4ed51e2-9df5-436f-8159-9056a9f48b20")
 		)
@@ -4164,6 +4482,118 @@
 			(project "busy-board"
 				(path "/0502a6a9-5fe6-43a5-b6f7-3b5176fd87b6/08933428-202d-4e44-b1e5-bc563aabcc56/4c633b67-2d19-4a2d-9e10-a3e1f9571997"
 					(reference "D604")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:AO3400A")
+		(at 60.96 132.08 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1d9deb0c-0ad7-4181-b6c6-9be7783db347")
+		(property "Reference" "Q602"
+			(at 67.31 130.8099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "AO3400A"
+			(at 67.31 133.3499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 66.04 133.985 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3400A.pdf"
+			(at 66.04 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "30V Vds, 5.7A Id, N-Channel MOSFET, SOT-23"
+			(at 60.96 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C20917"
+			(at 60.96 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Alpha & Omega Semicon"
+			(at 60.96 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFR Part #" "AO3400A"
+			(at 60.96 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 60.96 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "ddecb0dd-3714-4dcd-9a62-cce11e8d4100")
+		)
+		(pin "1"
+			(uuid "71c4fed5-6a81-46a4-9c29-258a0a19c86c")
+		)
+		(pin "2"
+			(uuid "198404ad-8331-4cc6-ae2e-e331604f4070")
+		)
+		(instances
+			(project "busy-board"
+				(path "/0502a6a9-5fe6-43a5-b6f7-3b5176fd87b6/08933428-202d-4e44-b1e5-bc563aabcc56/4c633b67-2d19-4a2d-9e10-a3e1f9571997"
+					(reference "Q602")
 					(unit 1)
 				)
 			)
@@ -4278,6 +4708,15 @@
 			)
 		)
 		(property "Sim.Params" ""
+			(at 129.54 119.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 129.54 119.38 90)
 			(effects
 				(font
@@ -4418,6 +4857,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 78.74 119.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "80d49f6f-cc88-4fc4-9da9-b576940d5d6a")
 		)
@@ -4428,154 +4876,6 @@
 			(project "busy-board"
 				(path "/0502a6a9-5fe6-43a5-b6f7-3b5176fd87b6/08933428-202d-4e44-b1e5-bc563aabcc56/4c633b67-2d19-4a2d-9e10-a3e1f9571997"
 					(reference "D605")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_BJT:MMBT3904")
-		(at 162.56 132.08 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "233a5770-56a8-411e-8e9a-91e0deb058be")
-		(property "Reference" "Q606"
-			(at 167.64 130.8099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MMBT3904"
-			(at 167.64 133.3499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 167.64 133.985 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8564879385946705920"
-			(at 162.56 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "0.2A Ic, 40V Vce, Small Signal NPN Transistor, SOT-23"
-			(at 162.56 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "NPN"
-			(at 162.56 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=B 2=E 3=C"
-			(at 162.56 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "C7420353"
-			(at 162.56 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "hongjiacheng"
-			(at 162.56 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MFR Part #" "MMBT3904"
-			(at 162.56 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Library" ""
-			(at 162.56 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" ""
-			(at 162.56 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Params" ""
-			(at 162.56 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "1548401c-aa47-48d7-8dbb-09126ace315e")
-		)
-		(pin "3"
-			(uuid "955dc39d-c33e-415e-8f02-86b4b2f44100")
-		)
-		(pin "1"
-			(uuid "440fbd02-656b-4d5e-b0d8-315eb121e741")
-		)
-		(instances
-			(project "busy-board"
-				(path "/0502a6a9-5fe6-43a5-b6f7-3b5176fd87b6/08933428-202d-4e44-b1e5-bc563aabcc56/4c633b67-2d19-4a2d-9e10-a3e1f9571997"
-					(reference "Q606")
 					(unit 1)
 				)
 			)
@@ -4753,6 +5053,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 38.1 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "ffb57054-d7e6-479e-8e16-65679ab53850")
 		)
@@ -4877,6 +5186,15 @@
 			)
 		)
 		(property "Sim.Params" ""
+			(at 154.94 119.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 154.94 119.38 90)
 			(effects
 				(font
@@ -5429,154 +5747,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:MMBT3904")
-		(at 187.96 132.08 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4f3684d8-55a6-4cb4-b731-f28c4452cbd0")
-		(property "Reference" "Q607"
-			(at 193.04 130.8099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MMBT3904"
-			(at 193.04 133.3499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 193.04 133.985 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8564879385946705920"
-			(at 187.96 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "0.2A Ic, 40V Vce, Small Signal NPN Transistor, SOT-23"
-			(at 187.96 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "NPN"
-			(at 187.96 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=B 2=E 3=C"
-			(at 187.96 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "C7420353"
-			(at 187.96 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "hongjiacheng"
-			(at 187.96 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MFR Part #" "MMBT3904"
-			(at 187.96 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Library" ""
-			(at 187.96 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" ""
-			(at 187.96 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Params" ""
-			(at 187.96 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "4780c432-4485-4128-8e3a-34534885d4a4")
-		)
-		(pin "3"
-			(uuid "2d8f5bf7-1243-4e3b-b04b-8c9b3b2554cc")
-		)
-		(pin "1"
-			(uuid "6f553080-3abd-44e1-b6b9-69c59e9ee7e4")
-		)
-		(instances
-			(project "busy-board"
-				(path "/0502a6a9-5fe6-43a5-b6f7-3b5176fd87b6/08933428-202d-4e44-b1e5-bc563aabcc56/4c633b67-2d19-4a2d-9e10-a3e1f9571997"
-					(reference "Q607")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 228.6 57.15 0)
 		(unit 1)
@@ -5676,6 +5846,15 @@
 			)
 		)
 		(property "Sim.Params" ""
+			(at 228.6 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 228.6 57.15 0)
 			(effects
 				(font
@@ -5847,6 +6026,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 106.68 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "11"
 			(uuid "281ffaf7-70a6-4ed0-b3bb-db5258ae672a")
 		)
@@ -6004,6 +6192,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 180.34 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "d1360aa4-7974-4211-b1eb-655b66719b84")
 		)
@@ -6093,6 +6290,15 @@
 			)
 		)
 		(property "MFR Part #" "74HC08D,653"
+			(at 55.88 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 55.88 76.2 0)
 			(effects
 				(font
@@ -6258,6 +6464,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 129.54 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "298b79f1-12b0-48e3-a7cc-35dbd5d8b0e7")
 		)
@@ -6406,6 +6621,118 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_FET:AO3400A")
+		(at 162.56 132.08 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "642647d2-ecce-489f-ba81-76a3f5f091d9")
+		(property "Reference" "Q606"
+			(at 168.91 130.8099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "AO3400A"
+			(at 168.91 133.3499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 167.64 133.985 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3400A.pdf"
+			(at 167.64 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "30V Vds, 5.7A Id, N-Channel MOSFET, SOT-23"
+			(at 162.56 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C20917"
+			(at 162.56 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Alpha & Omega Semicon"
+			(at 162.56 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFR Part #" "AO3400A"
+			(at 162.56 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 162.56 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "c203e9ef-7ae3-48df-9f99-5a49e6a1c798")
+		)
+		(pin "1"
+			(uuid "a0c28624-c0b4-48ff-9093-35ff10702051")
+		)
+		(pin "2"
+			(uuid "438ebb4d-c587-4fca-af86-4b6fe099686b")
+		)
+		(instances
+			(project "busy-board"
+				(path "/0502a6a9-5fe6-43a5-b6f7-3b5176fd87b6/08933428-202d-4e44-b1e5-bc563aabcc56/4c633b67-2d19-4a2d-9e10-a3e1f9571997"
+					(reference "Q606")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 154.94 109.22 0)
 		(unit 1)
@@ -6503,6 +6830,15 @@
 			)
 		)
 		(property "Sim.Params" ""
+			(at 154.94 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 154.94 109.22 0)
 			(effects
 				(font
@@ -6698,6 +7034,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 78.74 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "54d564f6-b21f-4975-9424-5d8a06a3a18a")
 		)
@@ -6811,6 +7156,15 @@
 			)
 		)
 		(property "Sim.Params" ""
+			(at 190.5 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 190.5 109.22 0)
 			(effects
 				(font
@@ -6942,6 +7296,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 241.3 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9f1a5653-756e-4902-99f4-570926c1c752")
 		)
@@ -6952,6 +7315,118 @@
 			(project "busy-board"
 				(path "/0502a6a9-5fe6-43a5-b6f7-3b5176fd87b6/08933428-202d-4e44-b1e5-bc563aabcc56/4c633b67-2d19-4a2d-9e10-a3e1f9571997"
 					(reference "C602")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:AO3400A")
+		(at 187.96 132.08 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "78ef3955-c88d-4124-b949-ae734c1303aa")
+		(property "Reference" "Q607"
+			(at 194.31 130.8099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "AO3400A"
+			(at 194.31 133.3499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 193.04 133.985 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3400A.pdf"
+			(at 193.04 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "30V Vds, 5.7A Id, N-Channel MOSFET, SOT-23"
+			(at 187.96 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C20917"
+			(at 187.96 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Alpha & Omega Semicon"
+			(at 187.96 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFR Part #" "AO3400A"
+			(at 187.96 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 187.96 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "eb4c3fb1-f869-49ef-8f8f-d9ab6f1ec511")
+		)
+		(pin "1"
+			(uuid "65da1ce4-c958-4e23-8c64-73e86a8801a3")
+		)
+		(pin "2"
+			(uuid "0da77cd5-948f-4eaf-8dd1-420a5b0b8840")
+		)
+		(instances
+			(project "busy-board"
+				(path "/0502a6a9-5fe6-43a5-b6f7-3b5176fd87b6/08933428-202d-4e44-b1e5-bc563aabcc56/4c633b67-2d19-4a2d-9e10-a3e1f9571997"
+					(reference "Q607")
 					(unit 1)
 				)
 			)
@@ -7066,6 +7541,15 @@
 			)
 		)
 		(property "Sim.Params" ""
+			(at 114.3 119.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 114.3 119.38 90)
 			(effects
 				(font
@@ -7338,6 +7822,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 53.34 119.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "14cd510f-564a-4033-a098-4f3a1be2fc58")
 		)
@@ -7470,6 +7963,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 139.7 119.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "19936e11-90b2-4512-931c-695c12d1e1f9")
 		)
@@ -7583,6 +8085,15 @@
 			)
 		)
 		(property "Sim.Params" ""
+			(at 63.5 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 63.5 109.22 0)
 			(effects
 				(font
@@ -7723,6 +8234,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 190.5 119.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "b4d4db56-6705-48a4-b19a-84b87c89c595")
 		)
@@ -7836,6 +8356,15 @@
 			)
 		)
 		(property "Sim.Params" ""
+			(at 53.34 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 53.34 109.22 0)
 			(effects
 				(font
@@ -7976,6 +8505,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 27.94 119.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "8a2be1cc-b480-4d91-ba74-39015bd0574b")
 		)
@@ -8089,6 +8627,15 @@
 			)
 		)
 		(property "Sim.Params" ""
+			(at 27.94 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 27.94 138.43 0)
 			(effects
 				(font
@@ -8218,6 +8765,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 165.1 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "d9410e30-a0a9-45c8-b8ea-fe13fa4d14c0")
 		)
@@ -8294,6 +8850,118 @@
 			(project "busy-board"
 				(path "/0502a6a9-5fe6-43a5-b6f7-3b5176fd87b6/08933428-202d-4e44-b1e5-bc563aabcc56/4c633b67-2d19-4a2d-9e10-a3e1f9571997"
 					(reference "#PWR0602")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:AO3400A")
+		(at 86.36 132.08 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a0f533bb-fd54-4ee6-9c79-a19d35f6668e")
+		(property "Reference" "Q603"
+			(at 92.71 130.8099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "AO3400A"
+			(at 92.71 133.3499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 91.44 133.985 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3400A.pdf"
+			(at 91.44 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "30V Vds, 5.7A Id, N-Channel MOSFET, SOT-23"
+			(at 86.36 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C20917"
+			(at 86.36 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Alpha & Omega Semicon"
+			(at 86.36 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFR Part #" "AO3400A"
+			(at 86.36 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 86.36 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "4f337d0c-f4fd-48a9-814f-dc67a7a0dcff")
+		)
+		(pin "1"
+			(uuid "1b17015d-285b-4050-8ca0-7d8d7ca43d7a")
+		)
+		(pin "2"
+			(uuid "5282ff86-a79f-42de-bdfa-4e6f8919c434")
+		)
+		(instances
+			(project "busy-board"
+				(path "/0502a6a9-5fe6-43a5-b6f7-3b5176fd87b6/08933428-202d-4e44-b1e5-bc563aabcc56/4c633b67-2d19-4a2d-9e10-a3e1f9571997"
+					(reference "Q603")
 					(unit 1)
 				)
 			)
@@ -8408,6 +9076,15 @@
 			)
 		)
 		(property "Sim.Params" ""
+			(at 165.1 119.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 165.1 119.38 90)
 			(effects
 				(font
@@ -8537,6 +9214,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 104.14 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "7c272e55-b0fc-43e3-a378-a92135dd92a3")
 		)
@@ -8547,154 +9233,6 @@
 			(project "busy-board"
 				(path "/0502a6a9-5fe6-43a5-b6f7-3b5176fd87b6/08933428-202d-4e44-b1e5-bc563aabcc56/4c633b67-2d19-4a2d-9e10-a3e1f9571997"
 					(reference "R607")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_BJT:MMBT3904")
-		(at 111.76 132.08 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ac0d13b9-c853-4857-bcf6-2a5cc78ea8b2")
-		(property "Reference" "Q604"
-			(at 116.84 130.8099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MMBT3904"
-			(at 116.84 133.3499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 116.84 133.985 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8564879385946705920"
-			(at 111.76 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "0.2A Ic, 40V Vce, Small Signal NPN Transistor, SOT-23"
-			(at 111.76 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "NPN"
-			(at 111.76 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=B 2=E 3=C"
-			(at 111.76 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "C7420353"
-			(at 111.76 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "hongjiacheng"
-			(at 111.76 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MFR Part #" "MMBT3904"
-			(at 111.76 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Library" ""
-			(at 111.76 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" ""
-			(at 111.76 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Params" ""
-			(at 111.76 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "a2de6e96-fa3d-4bf5-8cf8-e1ef9381574c")
-		)
-		(pin "3"
-			(uuid "2abd1d31-e639-4a8b-938b-ae372197a6ce")
-		)
-		(pin "1"
-			(uuid "80fda657-42f8-442b-adf8-71f4d7296212")
-		)
-		(instances
-			(project "busy-board"
-				(path "/0502a6a9-5fe6-43a5-b6f7-3b5176fd87b6/08933428-202d-4e44-b1e5-bc563aabcc56/4c633b67-2d19-4a2d-9e10-a3e1f9571997"
-					(reference "Q604")
 					(unit 1)
 				)
 			)
@@ -8798,6 +9336,15 @@
 			)
 		)
 		(property "Sim.Params" ""
+			(at 180.34 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 180.34 138.43 0)
 			(effects
 				(font
@@ -8930,6 +9477,15 @@
 			)
 		)
 		(property "Sim.Params" ""
+			(at 104.14 119.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 104.14 119.38 90)
 			(effects
 				(font
@@ -9125,6 +9681,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 129.54 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "2d831e11-361c-4811-931e-d0da83cdb6b5")
 		)
@@ -9312,6 +9877,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 88.9 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "4a3598c6-8de1-441b-921c-ba759468a37c")
 		)
@@ -9322,154 +9896,6 @@
 			(project "busy-board"
 				(path "/0502a6a9-5fe6-43a5-b6f7-3b5176fd87b6/08933428-202d-4e44-b1e5-bc563aabcc56/4c633b67-2d19-4a2d-9e10-a3e1f9571997"
 					(reference "R606")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_BJT:MMBT3904")
-		(at 86.36 132.08 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d5b6b27d-eb91-48dc-9246-cbdff5233db5")
-		(property "Reference" "Q603"
-			(at 91.44 130.8099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MMBT3904"
-			(at 91.44 133.3499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 91.44 133.985 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8564879385946705920"
-			(at 86.36 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "0.2A Ic, 40V Vce, Small Signal NPN Transistor, SOT-23"
-			(at 86.36 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "NPN"
-			(at 86.36 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=B 2=E 3=C"
-			(at 86.36 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "C7420353"
-			(at 86.36 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "hongjiacheng"
-			(at 86.36 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MFR Part #" "MMBT3904"
-			(at 86.36 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Library" ""
-			(at 86.36 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" ""
-			(at 86.36 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Params" ""
-			(at 86.36 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "f47dd4f3-7f9c-40bb-95d0-8ea96c8901e7")
-		)
-		(pin "3"
-			(uuid "ee87c73d-5364-466f-ac6b-8e71be3792be")
-		)
-		(pin "1"
-			(uuid "06a3406e-c4ef-4f4b-afe8-b25cc812b7ed")
-		)
-		(instances
-			(project "busy-board"
-				(path "/0502a6a9-5fe6-43a5-b6f7-3b5176fd87b6/08933428-202d-4e44-b1e5-bc563aabcc56/4c633b67-2d19-4a2d-9e10-a3e1f9571997"
-					(reference "Q603")
 					(unit 1)
 				)
 			)
@@ -9584,6 +10010,15 @@
 			)
 		)
 		(property "Sim.Params" ""
+			(at 88.9 119.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 88.9 119.38 90)
 			(effects
 				(font
@@ -9713,6 +10148,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 139.7 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "380a66fe-20fe-4cd9-bf45-d4fb37fb4b62")
 		)
@@ -9729,17 +10173,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:MMBT3904")
-		(at 60.96 132.08 0)
+		(lib_id "Transistor_FET:AO3400A")
+		(at 111.76 132.08 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "d9b0bef4-b8d1-48fa-a1ac-9a8c4bd841bc")
-		(property "Reference" "Q602"
-			(at 66.04 130.8099 0)
+		(uuid "e2af0cbf-ec03-4a39-b7c5-a3a895bd10e8")
+		(property "Reference" "Q604"
+			(at 118.11 130.8099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9747,8 +10191,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "MMBT3904"
-			(at 66.04 133.3499 0)
+		(property "Value" "AO3400A"
+			(at 118.11 133.3499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9757,7 +10201,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 66.04 133.985 0)
+			(at 116.84 133.985 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9767,8 +10211,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8564879385946705920"
-			(at 60.96 132.08 0)
+		(property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3400A.pdf"
+			(at 116.84 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9777,8 +10221,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "0.2A Ic, 40V Vce, Small Signal NPN Transistor, SOT-23"
-			(at 60.96 132.08 0)
+		(property "Description" "30V Vds, 5.7A Id, N-Channel MOSFET, SOT-23"
+			(at 111.76 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9786,8 +10230,8 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Device" "NPN"
-			(at 60.96 132.08 0)
+		(property "LCSC Part #" "C20917"
+			(at 111.76 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9795,8 +10239,8 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Pins" "1=B 2=E 3=C"
-			(at 60.96 132.08 0)
+		(property "Manufacturer" "Alpha & Omega Semicon"
+			(at 111.76 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9804,8 +10248,8 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C7420353"
-			(at 60.96 132.08 0)
+		(property "MFR Part #" "AO3400A"
+			(at 111.76 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9813,212 +10257,28 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "hongjiacheng"
-			(at 60.96 132.08 0)
+		(property "Sim.Device" ""
+			(at 111.76 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(property "MFR Part #" "MMBT3904"
-			(at 60.96 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Library" ""
-			(at 60.96 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" ""
-			(at 60.96 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Params" ""
-			(at 60.96 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "d7577700-03d5-460f-830c-559729a61321")
 		)
 		(pin "3"
-			(uuid "448e0b6c-48b2-463a-8a0c-88de9f2e3072")
+			(uuid "ba4a25a0-243d-4d1f-802d-7d27fc1d2dda")
 		)
 		(pin "1"
-			(uuid "7bf1cbf1-ac9f-4f49-b0db-a90bc181f80a")
+			(uuid "0e788a81-9b3f-48b3-ac31-9ecbb3c29607")
+		)
+		(pin "2"
+			(uuid "b86362ad-c6d0-49fe-8836-929788a16ec1")
 		)
 		(instances
 			(project "busy-board"
 				(path "/0502a6a9-5fe6-43a5-b6f7-3b5176fd87b6/08933428-202d-4e44-b1e5-bc563aabcc56/4c633b67-2d19-4a2d-9e10-a3e1f9571997"
-					(reference "Q602")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_BJT:MMBT3904")
-		(at 137.16 132.08 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e4769637-ec5e-4d6c-84b8-e486442f81b4")
-		(property "Reference" "Q605"
-			(at 142.24 130.8099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MMBT3904"
-			(at 142.24 133.3499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 142.24 133.985 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8564879385946705920"
-			(at 137.16 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "0.2A Ic, 40V Vce, Small Signal NPN Transistor, SOT-23"
-			(at 137.16 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "NPN"
-			(at 137.16 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=B 2=E 3=C"
-			(at 137.16 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "C7420353"
-			(at 137.16 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "hongjiacheng"
-			(at 137.16 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MFR Part #" "MMBT3904"
-			(at 137.16 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Library" ""
-			(at 137.16 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" ""
-			(at 137.16 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Params" ""
-			(at 137.16 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "72055792-bbe0-4ba8-882d-fd7a5b2c809a")
-		)
-		(pin "3"
-			(uuid "c34727fd-4bf3-4761-8e2f-397b06498961")
-		)
-		(pin "1"
-			(uuid "707cf13e-3996-453f-9bb6-a7e1377a18bb")
-		)
-		(instances
-			(project "busy-board"
-				(path "/0502a6a9-5fe6-43a5-b6f7-3b5176fd87b6/08933428-202d-4e44-b1e5-bc563aabcc56/4c633b67-2d19-4a2d-9e10-a3e1f9571997"
-					(reference "Q605")
+					(reference "Q604")
 					(unit 1)
 				)
 			)
@@ -10122,6 +10382,15 @@
 			)
 		)
 		(property "Sim.Params" ""
+			(at 27.94 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 27.94 109.22 0)
 			(effects
 				(font
@@ -10251,6 +10520,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 104.14 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "680c13f6-c310-4852-97c9-d7d0e01a4c9c")
 		)
@@ -10372,6 +10650,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 78.74 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "6cb12e32-c67f-4be1-bf1a-5486da96da62")
 		)
@@ -10448,154 +10735,6 @@
 			(project "busy-board"
 				(path "/0502a6a9-5fe6-43a5-b6f7-3b5176fd87b6/08933428-202d-4e44-b1e5-bc563aabcc56/4c633b67-2d19-4a2d-9e10-a3e1f9571997"
 					(reference "#PWR0613")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_BJT:MMBT3904")
-		(at 35.56 132.08 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f232b044-5756-4f2f-b301-5ee82f0a37c2")
-		(property "Reference" "Q601"
-			(at 40.64 130.8099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MMBT3904"
-			(at 40.64 133.3499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 40.64 133.985 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8564879385946705920"
-			(at 35.56 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "0.2A Ic, 40V Vce, Small Signal NPN Transistor, SOT-23"
-			(at 35.56 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "NPN"
-			(at 35.56 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=B 2=E 3=C"
-			(at 35.56 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "C7420353"
-			(at 35.56 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "hongjiacheng"
-			(at 35.56 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MFR Part #" "MMBT3904"
-			(at 35.56 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Library" ""
-			(at 35.56 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" ""
-			(at 35.56 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Params" ""
-			(at 35.56 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "987a699e-dc0b-44b4-a2e7-4b533abc6067")
-		)
-		(pin "3"
-			(uuid "c9af62c3-3def-4358-a285-79ca5071c436")
-		)
-		(pin "1"
-			(uuid "30b21542-a774-481e-8475-efea426008e1")
-		)
-		(instances
-			(project "busy-board"
-				(path "/0502a6a9-5fe6-43a5-b6f7-3b5176fd87b6/08933428-202d-4e44-b1e5-bc563aabcc56/4c633b67-2d19-4a2d-9e10-a3e1f9571997"
-					(reference "Q601")
 					(unit 1)
 				)
 			)
@@ -10784,6 +10923,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 38.1 119.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "4c692b4f-11cc-4829-a41a-36c4e13fdb91")
 		)
@@ -10897,6 +11045,15 @@
 			)
 		)
 		(property "Sim.Params" ""
+			(at 114.3 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 114.3 109.22 0)
 			(effects
 				(font
@@ -11037,6 +11194,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 180.34 119.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "e53599e3-48d3-4e5b-8377-b70873618edb")
 		)
@@ -11150,6 +11316,15 @@
 			)
 		)
 		(property "Sim.Params" ""
+			(at 53.34 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 53.34 138.43 0)
 			(effects
 				(font

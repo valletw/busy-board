@@ -1,4 +1,4 @@
-28657214431855118
+28650089815971966
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -112959,40 +112959,12 @@ BOURNS_3362P
 3
 3
 footprints
-CONN-TH_7P-P3.50_DORABO_DB125-3.5-7P-GN-S
-
-
-0
-7
-7
-footprints
-CONN-TH_DB301V-3.5-2P-GN
-
-
-0
-2
-2
-footprints
-FL_002
-
-
-0
-1
-1
-footprints
 SW-TH_DM1-12UP-1
 
 
 0
 3
 3
-footprints
-SW-TH_RS-08-300-150GF
-
-
-0
-8
-8
 footprints
 SW-TH_RT-0C4-D
 

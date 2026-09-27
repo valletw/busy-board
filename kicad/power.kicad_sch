@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "Busy Board")
-		(date "2026-08-08")
-		(rev "1.0.0")
+		(date "2026-09-25")
+		(rev "1.1.0")
 	)
 	(lib_symbols
 		(symbol "Battery_Management:TP4056-42-ESOP8"
@@ -2840,7 +2840,10 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Regulator_Linear:AMS1117-3.3"
+		(symbol "Regulator_Linear:XC6206PxxxMR"
+			(pin_names
+				(offset 0.254)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2852,7 +2855,7 @@
 					)
 				)
 			)
-			(property "Value" "AMS1117-3.3"
+			(property "Value" "XC6206PxxxMR"
 				(at 0 3.175 0)
 				(effects
 					(font
@@ -2861,25 +2864,17 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
-				(at 0 5.08 0)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-3"
+				(at 0 5.715 0)
 				(effects
 					(font
 						(size 1.27 1.27)
+						(italic yes)
 					)
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://www.advanced-monolithic.com/pdf/ds1117.pdf"
-				(at 2.54 -6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223"
+			(property "Datasheet" "https://www.torexsemi.com/file/xc6206/XC6206.pdf"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2888,7 +2883,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "linear regulator ldo fixed positive"
+			(property "Description" "Positive 60-250mA Low Dropout Regulator, Fixed Output, SOT-23"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2897,7 +2892,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "SOT?223*TabPin2*"
+			(property "ki_keywords" "Torex LDO Voltage Regulator Fixed Positive"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2906,10 +2901,19 @@
 					(hide yes)
 				)
 			)
-			(symbol "AMS1117-3.3_0_1"
+			(property "ki_fp_filters" "SOT?23?3*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "XC6206PxxxMR_0_1"
 				(rectangle
-					(start -5.08 -5.08)
-					(end 5.08 1.905)
+					(start -5.08 1.905)
+					(end 5.08 -5.08)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -2919,7 +2923,7 @@
 					)
 				)
 			)
-			(symbol "AMS1117-3.3_1_1"
+			(symbol "XC6206PxxxMR_1_1"
 				(pin power_in line
 					(at -7.62 0 0)
 					(length 2.54)
@@ -5185,7 +5189,7 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 33.02) (xy 124.46 50.8)
+			(xy 124.46 30.48) (xy 124.46 50.8)
 		)
 		(stroke
 			(width 0)
@@ -5345,7 +5349,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 33.02) (xy 124.46 33.02)
+			(xy 121.92 30.48) (xy 124.46 30.48)
 		)
 		(stroke
 			(width 0)
@@ -5745,6 +5749,16 @@
 	)
 	(wire
 		(pts
+			(xy 121.92 27.94) (xy 127 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f6a4e64-23cd-4db0-96c4-2c34b0c09195")
+	)
+	(wire
+		(pts
 			(xy 241.3 81.28) (xy 241.3 82.55)
 		)
 		(stroke
@@ -5752,16 +5766,6 @@
 			(type default)
 		)
 		(uuid "82223fd2-c1f5-44e3-9774-fa109f12e10f")
-	)
-	(wire
-		(pts
-			(xy 124.46 30.48) (xy 124.46 27.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8455037a-81de-4624-a661-5c70471701d1")
 	)
 	(wire
 		(pts
@@ -5822,16 +5826,6 @@
 			(type default)
 		)
 		(uuid "8d3951d1-dcb1-4f41-8353-342f79e5020c")
-	)
-	(wire
-		(pts
-			(xy 124.46 27.94) (xy 127 27.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8dfa457f-485e-45b2-88ca-f72a368dac39")
 	)
 	(wire
 		(pts
@@ -6235,16 +6229,6 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 30.48) (xy 124.46 30.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dc24d8a9-0829-4bdf-bdd9-3865300c5ce8")
-	)
-	(wire
-		(pts
 			(xy 78.74 184.15) (xy 78.74 185.42)
 		)
 		(stroke
@@ -6639,6 +6623,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 69.85 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "fb1b80d1-bc28-44b4-9c70-eebde23663ad")
 		)
@@ -6827,6 +6820,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 72.39 30.48 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "0ce749a1-bf35-4dfd-a3cb-cad13607c4bb")
 		)
@@ -6957,6 +6959,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 38.1 125.73 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "98e8b086-c44f-4d6c-bad6-169c12c13ddb")
 		)
@@ -6974,8 +6985,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
-		(at 116.84 30.48 0)
-		(mirror y)
+		(at 116.84 30.48 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6983,7 +6993,7 @@
 		(dnp no)
 		(uuid "2011e750-a2f1-453b-8e4e-a34f1b41f147")
 		(property "Reference" "J201"
-			(at 116.84 39.37 0)
+			(at 116.84 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6991,7 +7001,7 @@
 			)
 		)
 		(property "Value" "JST PH 2P"
-			(at 116.84 36.83 0)
+			(at 116.84 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7071,6 +7081,15 @@
 			)
 		)
 		(property "Sim.Params" ""
+			(at 116.84 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 116.84 30.48 0)
 			(effects
 				(font
@@ -7261,6 +7280,15 @@
 			)
 		)
 		(property "Sim.Params" ""
+			(at 25.4 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 25.4 83.82 0)
 			(effects
 				(font
@@ -7654,6 +7682,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 96.52 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "0bfa3f2a-1c0f-41a5-910f-dae1dc280d80")
 		)
@@ -7767,6 +7804,15 @@
 			)
 		)
 		(property "Sim.Params" ""
+			(at 144.78 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 144.78 45.72 0)
 			(effects
 				(font
@@ -7889,6 +7935,15 @@
 		)
 		(property "Sim.Params" ""
 			(at 204.47 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 204.47 81.28 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8142,6 +8197,15 @@
 			)
 		)
 		(property "Sim.Params" ""
+			(at 144.78 33.02 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 144.78 33.02 90)
 			(effects
 				(font
@@ -8409,6 +8473,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 157.48 35.56 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "0a9dfa94-a965-4f39-b5f4-98e4a6329f7c")
 		)
@@ -8590,6 +8663,15 @@
 			)
 		)
 		(property "Sim.Params" ""
+			(at 25.4 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 25.4 125.73 0)
 			(effects
 				(font
@@ -8780,6 +8862,15 @@
 			)
 		)
 		(property "Sim.Params" ""
+			(at 83.82 165.1 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 83.82 165.1 90)
 			(effects
 				(font
@@ -8996,6 +9087,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 66.04 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "915517d2-4c26-4f2f-9fcb-6d646c1c1d8f")
 		)
@@ -9141,6 +9241,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 50.8 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "c9637ec7-3c01-4765-b04f-4f324421f69c")
 		)
@@ -9228,6 +9337,15 @@
 			)
 		)
 		(property "MFR Part #" "B0540WS"
+			(at 234.95 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 234.95 66.04 0)
 			(effects
 				(font
@@ -9426,6 +9544,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 215.9 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a3aed160-fb50-437f-a1b7-260af7a22a77")
 		)
@@ -9513,6 +9640,15 @@
 			)
 		)
 		(property "MFR Part #" "MSK12C02"
+			(at 132.08 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 132.08 27.94 0)
 			(effects
 				(font
@@ -9651,6 +9787,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 80.01 78.74 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "7a026701-d978-4796-89ba-f90da8f59c06")
 		)
@@ -9764,6 +9909,15 @@
 			)
 		)
 		(property "Sim.Params" ""
+			(at 44.45 137.16 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 44.45 137.16 90)
 			(effects
 				(font
@@ -9962,6 +10116,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 266.7 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a374596d-2a24-460b-a713-78f0511726d0")
 		)
@@ -10075,6 +10238,15 @@
 			)
 		)
 		(property "Sim.Params" ""
+			(at 241.3 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 241.3 72.39 0)
 			(effects
 				(font
@@ -10265,6 +10437,15 @@
 			)
 		)
 		(property "Sim.Params" ""
+			(at 256.54 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 256.54 35.56 0)
 			(effects
 				(font
@@ -10727,6 +10908,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 63.5 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "9ce500d7-c4c8-41e4-bd6a-deb788404544")
 		)
@@ -10814,6 +11004,15 @@
 			)
 		)
 		(property "MFR Part #" "SDFL1608S100KTF"
+			(at 218.44 66.04 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 218.44 66.04 90)
 			(effects
 				(font
@@ -10936,6 +11135,15 @@
 			)
 		)
 		(property "Sim.Params" ""
+			(at 35.56 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 35.56 38.1 0)
 			(effects
 				(font
@@ -11080,6 +11288,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 87.63 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "9ae44d8c-33ae-4ecb-a063-9efdaea88931")
 		)
@@ -11195,6 +11412,15 @@
 			)
 		)
 		(property "Sim.Params" ""
+			(at 203.2 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 203.2 35.56 0)
 			(effects
 				(font
@@ -11366,6 +11592,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 152.4 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "273595c3-894f-4939-b180-3140faa5aa03")
 		)
@@ -11373,6 +11608,114 @@
 			(project "busy-board"
 				(path "/0502a6a9-5fe6-43a5-b6f7-3b5176fd87b6/94e5aaad-7bc2-4272-9b41-78f7bb3daed3"
 					(reference "TP201")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Regulator_Linear:XC6206PxxxMR")
+		(at 231.14 30.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cb6465cf-2435-49ef-8821-466c5227e832")
+		(property "Reference" "U201"
+			(at 231.14 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "XC6206P332MR"
+			(at 231.14 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-3"
+			(at 231.14 24.765 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.torexsemi.com/file/xc6206/XC6206.pdf"
+			(at 231.14 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Positive 60-250mA Low Dropout Regulator, Fixed Output, SOT-23"
+			(at 231.14 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C5446"
+			(at 231.14 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Torex Semicon"
+			(at 231.14 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFR Part #" "XC6206P332MR-G"
+			(at 231.14 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 231.14 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "2aa13b7d-2661-4d66-9fd9-23f1c537ce9a")
+		)
+		(pin "3"
+			(uuid "c6827ce9-9807-4c95-8bda-2ca1f4aa4fc3")
+		)
+		(pin "1"
+			(uuid "c3732d4e-479e-445b-8c4c-211e35bae795")
+		)
+		(instances
+			(project "busy-board"
+				(path "/0502a6a9-5fe6-43a5-b6f7-3b5176fd87b6/94e5aaad-7bc2-4272-9b41-78f7bb3daed3"
+					(reference "U201")
 					(unit 1)
 				)
 			)
@@ -11482,6 +11825,15 @@
 			)
 		)
 		(property "Sim.Params" ""
+			(at 41.91 78.74 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 41.91 78.74 90)
 			(effects
 				(font
@@ -11669,6 +12021,15 @@
 			)
 		)
 		(property "Sim.Params" ""
+			(at 78.74 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 78.74 180.34 0)
 			(effects
 				(font
@@ -11906,6 +12267,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 218.44 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "c89b8458-3991-42b3-baf1-7f8dc18b7b60")
 		)
@@ -12036,6 +12406,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 241.3 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "67df78f6-7398-40fc-829b-5ebdc2ff6e9b")
 		)
@@ -12151,6 +12530,15 @@
 			)
 		)
 		(property "Sim.Params" ""
+			(at 243.84 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 243.84 35.56 0)
 			(effects
 				(font
@@ -12283,6 +12671,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 190.5 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e23b94a9-16b8-434b-a518-7a4fd0f4649b")
 		)
@@ -12399,6 +12796,15 @@
 			)
 		)
 		(property "Sim.Params" ""
+			(at 66.04 36.83 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
 			(at 66.04 36.83 90)
 			(effects
 				(font
@@ -12531,6 +12937,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Device" ""
+			(at 254 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "6f887cd7-4ef1-45f2-b9ca-6953ae9f60cd")
 		)
@@ -12541,131 +12956,6 @@
 			(project "busy-board"
 				(path "/0502a6a9-5fe6-43a5-b6f7-3b5176fd87b6/94e5aaad-7bc2-4272-9b41-78f7bb3daed3"
 					(reference "C205")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Regulator_Linear:AMS1117-3.3")
-		(at 231.14 30.48 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fbb5bbb2-acca-4024-ba92-3c8b9966a4dd")
-		(property "Reference" "U201"
-			(at 231.14 24.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "AMS1117-3.3"
-			(at 231.14 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
-			(at 231.14 25.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.advanced-monolithic.com/pdf/ds1117.pdf"
-			(at 233.68 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223"
-			(at 231.14 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "C6186"
-			(at 231.14 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Advanced Monolithic Systems"
-			(at 231.14 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MFR Part #" "AMS1117-3.3"
-			(at 231.14 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Library" ""
-			(at 231.14 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" ""
-			(at 231.14 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Params" ""
-			(at 231.14 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b8117a03-654b-4851-90be-4d486d58c70d")
-		)
-		(pin "3"
-			(uuid "d0f1154a-9954-4176-8764-b96c8c946f4f")
-		)
-		(pin "2"
-			(uuid "ae785fdb-f178-4493-af22-152bddbd836d")
-		)
-		(instances
-			(project "busy-board"
-				(path "/0502a6a9-5fe6-43a5-b6f7-3b5176fd87b6/94e5aaad-7bc2-4272-9b41-78f7bb3daed3"
-					(reference "U201")
 					(unit 1)
 				)
 			)
